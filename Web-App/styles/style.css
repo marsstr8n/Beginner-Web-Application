@@ -1,0 +1,423 @@
+/*
+filename: style.css
+author: Marcus Tran
+created: 12.03.24
+last modified: 12.03.24
+description: a stylesheet applied to all html documents
+*/
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /*I want to remove margin as the default, then add margins to 
+    individual components. */
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    text-align: center; /*for all h1 elements */
+}
+
+
+/*index.html css style*/
+.index {
+    color: whitesmoke; /*change the color of the text to fit the background better */
+    background-image: url(https://images.hdqwalls.com/wallpapers/mist-trees-fog-5k-8d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed ;
+} /*add a background in index file. Background covers the whole webpage */
+
+.index_desc{
+    margin: 40px; /*adjust margin of main text in index.html */
+}
+
+.index h2{
+    text-align: center;
+    font-size: 35px;
+} /*adjust the font of the main body, having h2 in the middle, font bigger*/
+
+
+
+/*style jobs.html components here*/
+.jobs h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-variant: normal ;
+    font-size: 2.1em ;
+} /*h1 has its own family style*/
+
+aside {
+    width: 25%;
+    float: right;
+    box-sizing: border-box;
+    border: solid rgb(18, 18, 181);
+    padding: 14px;
+    margin-right: 10px;
+    margin-top: 12px;
+    
+    /*style the aside element, with a box border, margin and padding*/
+}
+
+#main {
+    width: 70%;
+    float: left;
+    padding: 10px;
+    
+} /*main body changed to fit to the left side of aside*/
+
+footer { /* design it so footer stays at the bottom. Applied for all html pages */
+    clear: both;
+    width: 100%;
+    background-color: rgb(116, 115, 117);
+    text-align: center;
+    padding: 0.7em;
+    position: relative;
+    bottom: 0;  
+}
+
+#ds {
+    width: 80%;
+    padding-left: 40px; /*adjust for the image */
+} /*image added to jobs.html*/
+
+#footer p { 
+    font-style: italic;
+    font-size: small;
+} /* change footer font */
+
+/*style for about.html */
+
+dt {
+    float: left;
+    clear: left;
+    width: 200px; /*common width*/
+    font-weight: bold;
+    color: rgb(6, 6, 132);
+    margin-left: 20px;
+    
+}
+
+dd {
+    margin-left: 80px;
+    padding-bottom: 0.5em;
+} /*change dd element padding and margin*/
+
+.myphoto {
+    border: 2px solid black;
+    text-align: center;
+    display: inline-block ;
+}
+/*style photo border, so it stays with the img*/
+
+.first {
+    float: left;
+    width: 60%;
+}
+
+.second {
+    float: right;
+    width: 40%;
+}
+
+
+.center {
+    width: 100%;
+    margin: 0 auto;
+}
+/*done to adjust the image to the right, definition list to the left*/
+
+
+.third {
+    clear: both;
+}
+
+.table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    background-color: rgb(253, 240, 221);
+    
+} /*table styling*/
+
+th {
+    height: 60px;
+    background-color: aqua; /* change the color of the first row */
+    font-weight: bold;
+}
+
+
+
+th, td {
+    padding: 14px;
+    text-align: center;   
+    word-wrap: break-word;
+}
+
+
+
+#tomail {
+    font-weight: bold;
+    color: rgb(6, 6, 132);
+    margin-left: 30px;
+}
+
+#tomail a{
+    margin-left: 50px;
+}
+
+/* css styling for form.html */
+label {
+    display: block; /*this helps each label-input to be on individual lines, instead of sticking close together */
+    
+}
+
+
+input[type="text"], input[type="email"] { /* this changes the style for the text input box */
+    
+    width: 90%;
+    padding: 10px;
+    margin: 7px;
+    border: 2px solid rgb(3, 3, 51);
+    border-radius: 4px;
+    display: block;
+}
+
+input[type="submit"] {
+    margin: 7px; /* gives some margin to submit button */
+}
+
+#f2 {
+    border-color: black;
+    margin: 7px;
+    width: 40%; /*style the fieldset of gender */
+}
+
+select {
+    margin: 10px;
+}
+
+input[type="text"]:focus {
+    background-color: rgb(219, 243, 236);   /*this highlights the area of text when clicking on */ 
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover { /*style the color of submit and reset buttons when hover */
+    background-color: rgb(219, 243, 236);
+}
+
+::marker {
+    color: rgb(52, 52, 145);
+    font-size: 20px;
+} /*changes the bullet points color and size, for ordered and unordered list*/
+
+/* enhancements */
+nav { /*adjust all nav elements*/
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    background-image: linear-gradient(180deg, black, rgb(73, 73, 227)); /*use gradient for black and blue color background*/
+}
+
+.clogo {
+    display: flex;
+    align-items: center;
+} /*adjust it so that logo and company name stays next to each other*/
+
+.clogo img {
+    width: 60px;
+    margin-right: 10px;
+} /*logo adjusting the size*/
+
+.clogo h1 {
+    font-size: 24px;
+    
+}
+
+.navbar li {
+    display: inline; /*helps to get the hyperlinks to present on a horizontal line*/
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 9px 6px;
+    border-radius: 3px;
+    
+} /*style the hyperlinks*/
+
+a:hover {
+    background-color: grey;
+} /*when hover, a grey box appears*/
+
+@media screen and (max-width: 768px) {
+    .clogo{
+        flex-direction: column ;
+        align-items: center ;
+    } /*logo and h1 go down with the screen change*/
+
+    .clogo img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    } /*ensure the hyperlinks becomes vertical when screen shrinks*/
+
+    .navbar li{
+        margin: 9px 0; /*create some space between the hyperlinks */
+    }
+
+    #sidebar, #main {
+        width: 100%;
+        float: none;
+        margin: 10px
+    }    /*brings aside section down below the 2 sections in jobs.html */
+
+   td, th {
+        padding: 3px;
+        font-size: 10px;
+   } /*adjust so that the font size becomes smaller to be appropriate for smaller screens */
+
+   .first {
+    float: none;
+    width: 100%;
+    }
+
+    .second {
+    float: none;
+    width: 100%;
+    } /*image and def list of about.html becomes line by line, not side by side*/
+} 
+
+/*second enhancement*/
+.index h2, h3 {
+    text-shadow: 2px 2px 4px rgba(59, 236, 74, 0.5);
+    
+} /*default text shadow*/
+
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 4px rgba(59, 236, 74, 0.5);
+    } 
+    50% {
+        text-shadow: 2px 2px 30px rgba(0, 255, 21, 0.739);
+    }
+    100% {
+        text-shadow: 2px 2px 4px rgba(59, 236, 74, 0.5);
+    }
+    
+} /*glowing animation*/
+
+.shadow {
+    animation: glow 2s infinite alternate;
+} /*create a loop for glowing*/
+
+.shadow:hover {
+    text-transform: bold;
+    text-shadow: 8px 12px 30px rgb(11, 11, 10);
+    color: yellow;
+    font-weight: 1050;
+} /*when hovers, text shadow is more pronounced, with text changes color to yellow*/
+
+
+/* assignment 2 content */
+/* #textAreaOtherSkill {
+    display: none;
+} hide the text area for other skills*/
+
+#postcode {
+    display: inline;
+}
+
+#errorFirstName {
+    display: inline;
+    color: red;
+
+}
+
+#errorLastName {
+    display: inline;
+    color: red;
+}
+
+#errorAddress {
+    display: inline;
+    color: red;
+}
+
+#errorEmail {
+    display: inline;
+    color: red;
+}
+
+#errorPhone {
+    display: inline;
+    color: red;
+}
+
+#errorSuburb {
+    display: inline;
+    color: red;
+}
+#errorPostcode {
+    display: inline;
+    color: red;
+}
+
+
+#errorOtherSkill {
+    color: red;
+}
+
+#dob {
+    display: inline;
+}
+#dobError {
+    display: inline;
+    color: red;
+}
+
+#notifyTime {
+    float: right;
+    display: inline;
+    
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: solid purple;
+    padding: 14px;
+    margin-right: 12em;
+    margin-top: 12px;
+    
+}
+
+#formContainer {
+    float: left;
+    width: 50%;
+    
+    
+}
+
+#countdown {
+    color: red
+}
+
+/* font for the dark mode toggle button */
+i {
+    font-size: 25px;
+}
+

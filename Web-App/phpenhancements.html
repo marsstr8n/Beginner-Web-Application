@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Enhancements">
+    <meta name="keywords" content="enhancements, job ad, new style">
+    <meta name="author" content="Marcus">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="scripts/enhancements.js"></script>
+    <title>Enhancements</title>
+
+</head>
+
+<body>
+    <nav>
+        <div class="clogo">
+            <img id="clogo" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/business-logo-design-template-78655edda18bc1196ab28760f1535baa_screen.jpg?ts=1617645324" alt="Company logo">
+            <h1>PXZ Institute</h1>
+        </div>
+    
+    <div class="menu">   
+    <ul class="navbar">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="jobs.php">Jobs</a></li>
+        <li><a href="apply.php">Apply Now</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="enhancements.php">Enhancements</a></li>
+        <li><a href="enhancements2.php">Enhancements 2</a></li>
+        <li><a href="phpenhancements.html">PHP Enhancements</a></li>
+        <li><a href="manage.php">Manager's View</a></li>
+    </ul> 
+    </div>
+    </nav>
+
+
+    <h2>1. Dynamically generate html code for the two job descriptions using php</h2>
+    <p>I created a table to store job description for the 2 jobs advertised. Then, I insert the two job descriptions, each have their own separate fields. Then, I run the firstenhance.php file once to insert the job information, which gave a confirmation that the jobs have been inserted into the database. Then, the jobs will be generated to jobs.php file. The most challenging problem I encountered was how to separate the listed key responsibilities. So I use foreach condition and display them as a list.</p>
+
+    <a href="firstenhance.php">Click here to generate the job descriptions, and check the source code: firstenhance.php</a>
+
+    <h2>2. Email confirmation sent to user</h2>
+    <p>I created two functions: one to send a confirmation email to applicant, once they submit the form; the other to notify them as their application status is changed. I linked the first function to the processEOI.php file, once user submits their form. The second function was linked to the manage.php file, in the function to change update the applicant status. I needed to modify the code slightly to call the applicant's firstname and email from EOI table, and declare their variables. Then, I had all the variables needed for this to work.</p>
+
+    <a href="secondenhance.php">Link to the source code: secondenhance.php</a>
+
+</body>
